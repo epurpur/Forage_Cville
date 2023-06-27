@@ -1,18 +1,18 @@
-import React from 'react';
-import { MapContainer, TileLayer, Marker } from 'react-leaflet';
+import React, { useState, useEffect } from 'react';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
 const Map = () => {
-  const position = [51.505, -0.09]; // Initial position of the map marker
+    const [mapID, setMapID] = useState(1)
+    const position = [38.0293, -78.4767]; // Initial position of the map marker over Charlottesville
 
   return (
-    <MapContainer center={position} zoom={13} style={{ height: '100px', width: '150px' }}>
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" // Tile layer source
-        attribution="Map data &copy; <a href='https://www.openstreetmap.org/'>OpenStreetMap</a> contributors"
-      />
-      <Marker position={position} />
+    <MapContainer center={position} zoom={13} scrollWheelZoom={false} id='mapContainer'>
+        <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
     </MapContainer>
   );
 };
+        
+
+
 
 export default Map;
