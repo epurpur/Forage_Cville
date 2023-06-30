@@ -1,8 +1,26 @@
-h1, h2, #mapContainer {
-    border: 1px solid black;
+
+h1 {
+    text-align: center;
 }
 
 #mapContainer {
-    height: 300px;
-    width: 300px;
+    display: flex;
+    align-items: center;
+    height: 400px;
+    width: 99%;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    border-radius: 5px;
+}
+  
+.legend {
+    text-align: left;
+    line-height: 18px;
+    color: #555;
 }
